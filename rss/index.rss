@@ -1,1 +1,25 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>ATHN Technical Team</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 05 May 2015 04:03:46 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>ATHN Tech Team</title><description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Its Alive&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</description><link>http://localhost:2368/athn-tech-team/</link><guid isPermaLink="false">8b8fdff2-8a3b-4258-939c-d747fb6d34a0</guid><dc:creator>ATHN Technical Team</dc:creator><pubDate>Tue, 05 May 2015 03:52:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Its Alive&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>ATHN Technical Team</title><description>Thoughts, stories and ideas.</description><link>http://localhost:2368/</link><generator>Ghost 0.6</generator><lastBuildDate>Tue, 05 May 2015 12:24:14 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>ATHN Tech Team</title><description>&lt;p&gt;&lt;strong&gt;Should we have a blog?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe we could tell the world things like...&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javacsript"&gt;$.fn.jquery
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ruby"&gt;OmniAuth.config.mock_auth[:default] = OmniAuth::AuthHash.new({  
+      :extra =&amp;gt; { :uniqueid =&amp;gt; user.uid}
+    })
+&lt;/code&gt;&lt;/pre&gt;</description><link>http://localhost:2368/athn-tech-team/</link><guid isPermaLink="false">8b8fdff2-8a3b-4258-939c-d747fb6d34a0</guid><dc:creator>ATHN Technical Team</dc:creator><pubDate>Tue, 05 May 2015 03:52:31 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Should we have a blog?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Maybe we could tell the world things like...&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-javacsript"&gt;$.fn.jquery
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or &lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-ruby"&gt;OmniAuth.config.mock_auth[:default] = OmniAuth::AuthHash.new({  
+      :extra =&amp;gt; { :uniqueid =&amp;gt; user.uid}
+    })
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item></channel></rss>
