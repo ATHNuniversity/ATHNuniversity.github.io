@@ -72,7 +72,7 @@ GEM
       servolux
       tilt (~> 2.0)
       uglifier (~> 3.0)
-    middleman-deploy (1.0.0)
+    middleman-deploy (2.0.0.pre.alpha)
       middleman-core (>= 3.2)
       net-sftp
       ptools
@@ -111,7 +111,7 @@ DEPENDENCIES
   builder (~> 3.0)
   middleman (~> 4.1)
   middleman-blog
-  middleman-deploy
+  middleman-deploy (~> 2.0.0.pre.alpha)
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data
   wdm (~> 0.1.0)
