@@ -112,7 +112,7 @@ DEPENDENCIES
   middleman (~> 4.1)
   middleman-blog
   middleman-deploy (~> 2.0.0.pre.alpha)
-  redcarpet (~> 3.3, >= 3.3.3)
+  redcarpet (~> 3.4)
   tzinfo-data
   wdm (~> 0.1.0)
 
