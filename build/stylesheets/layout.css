@@ -1,0 +1,241 @@
+/* Constants of the app: **colors and mixins**. You probably do not want to edit this file... Concepts (meaning objects),
+layout, and html element base styling does not go here.*/
+/* Use layout.css when you are styling the base layout of the page. If it is part of the main content section (meaning
+   within .main_content and after .content_header **it does not belong in here** */
+.header {
+  color: white;
+  background-color: #175EA9;
+  box-shadow: 0px 2px 10px #000;
+  -moz-box-shadow: 0px 2px 10px #000;
+  -webkit-box-shadow: 0px 2px 10px #000;
+  height: 76px;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; }
+  .header a {
+    color: white; }
+  .header .header_content {
+    padding: 5px 0 10px 0;
+    width: 1000px;
+    margin: 0 auto; }
+    .header .header_content h1 {
+      float: left;
+      overflow: hidden;
+      width: 284px;
+      height: 39px;
+      margin-left: 28px;
+      margin-top: 12px; }
+  .header .controls, .header .help, .header .profile {
+    margin-top: 5px;
+    float: right; }
+  .header .controls {
+    font-size: 10px; }
+    .header .controls .medium_button {
+      margin: 14px 15px 0 0;
+      float: right;
+      border: 1px solid #65A0E0; }
+    .header .controls .profile {
+      font-size: 18px;
+      font-size: 18px;
+      font-weight: bold;
+      margin-right: 15px; }
+      .header .controls .profile ul {
+        font-size: 14px;
+        font-weight: normal; }
+    .header .controls .help {
+      font-size: 40px;
+      font-weight: bold;
+      border-radius: 25px;
+      -moz-border-radius: 25px;
+      -webkit-border-radius: 25px;
+      width: 24px;
+      border: 4px solid #65A0E0;
+      line-height: 25px;
+      padding: 8px;
+      margin-right: 15px; }
+  .header ul li {
+    display: inline-block;
+    padding-right: 7px;
+    margin-right: 4px;
+    line-height: 100%; }
+    .header ul li:not(:last-of-type) {
+      border-right: 2px solid #fff; }
+
+.footer {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 3em 0;
+  color: #4e4f4e;
+  text-align: center;
+  font-size: 12px; }
+
+.main_content {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-top: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+  width: 1020px;
+  position: relative;
+  padding-top: 76px;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-shadow: 0 5px 10px #aaa;
+  -moz-box-shadow: 0 5px 10px #aaa;
+  box-shadow: 0 5px 10px #aaa; }
+
+.navigation_container .navigation {
+  background-color: #65a1e0;
+  border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  color: #fff;
+  font-size: 13px; }
+  .navigation_container .navigation a {
+    color: white; }
+    .navigation_container .navigation a:hover {
+      text-decoration: none; }
+  .navigation_container .navigation .dropdown {
+    position: relative;
+    padding-left: 8px;
+    height: 36px; }
+    .navigation_container .navigation .dropdown a.current, .navigation_container .navigation .dropdown li.current, .navigation_container .navigation .dropdown p:hover, .navigation_container .navigation .dropdown a:hover {
+      color: #175EA9;
+      text-shadow: 1px 1px #98c2f0; }
+    .navigation_container .navigation .dropdown li {
+      float: left;
+      padding: 5px 10px;
+      line-height: 26px; }
+    .navigation_container .navigation .dropdown > li:last-child a, .navigation_container .navigation .dropdown > li:last-child p {
+      border: none; }
+    .navigation_container .navigation .dropdown a, .navigation_container .navigation .dropdown p {
+      border-right: 1px solid white;
+      padding-right: 20px;
+      padding-left: 2px; }
+    .navigation_container .navigation .dropdown span.arrow {
+      font-size: 80%; }
+  .navigation_container .navigation .submenu {
+    margin-top: 4px;
+    background-color: #65a1e0;
+    position: absolute;
+    margin-left: -16px;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    z-index: 10;
+    display: none; }
+    .navigation_container .navigation .submenu li {
+      float: none;
+      padding: 4px 10px; }
+      .navigation_container .navigation .submenu li:hover {
+        background-color: #175EA9; }
+    .navigation_container .navigation .submenu a {
+      display: block;
+      border: none;
+      text-shadow: none; }
+    .navigation_container .navigation .submenu a:hover {
+      color: white;
+      text-shadow: none; }
+  .navigation_container .navigation li:hover .submenu {
+    display: block; }
+
+#searchbox {
+  position: absolute;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  left: 700px;
+  padding: 8px 10px;
+  height: 40px;
+  width: 240px;
+  background: #65A0E0;
+  margin-bottom: 15px; }
+  #searchbox form {
+    background-color: transparent;
+    border-bottom: none;
+    padding-bottom: 0; }
+  #searchbox .search_input_wrapper {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: inset 0px 3px 5px #ddd;
+    -webkit-box-shadow: inset 0px 3px 5px #ddd;
+    box-shadow: inset 0px 3px 5px #ddd;
+    height: 38px;
+    background: white; }
+    #searchbox .search_input_wrapper input {
+      background: transparent;
+      border: 0;
+      color: #0157a1;
+      font-weight: bold;
+      height: 30px;
+      margin: 1px 0 0 1px;
+      width: 230px;
+      font-size: 16px;
+      padding-left: 7px; }
+    #searchbox .search_input_wrapper .magnifying_glass {
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      padding: 0 0 3px 5px;
+      left: 215px;
+      top: 15px;
+      border-left: 1px solid #a3a4a4; }
+
+.breadcrumbs, .clinic_context {
+  margin: 10px 0 -38px 0px;
+  /*in combination with the line height, this ensures that breadcrumbs don't move the h1*/
+  font-size: 12px;
+  color: #0157a1;
+  line-height: 30px; }
+  .breadcrumbs a, .clinic_context a {
+    color: #0157a1; }
+    .breadcrumbs a:after, .clinic_context a:after {
+      content: '/';
+      padding: 0 3px 0 6px; }
+    .breadcrumbs a:last-of-type:after, .clinic_context a:last-of-type:after {
+      content: '';
+      padding: 0; }
+  .breadcrumbs span.last, .clinic_context span.last {
+    font-weight: bold; }
+
+.content_header {
+  border: 1px solid #ddd;
+  border-width: 1px 0;
+  margin: 46px 0 0;
+  padding: 0;
+  overflow: auto; }
+  .content_header h1 {
+    float: left;
+    height: 74px;
+    line-height: 74px; }
+  .content_header h2 {
+    clear: left;
+    border-top: 1px solid #ddd;
+    color: #0157a1;
+    padding: 15px 0; }
+  .content_header .list_button {
+    line-height: 28px;
+    margin-top: 23px; }
+  .content_header + div {
+    margin-top: 25px; }
+  .content_header.tabbed {
+    border-bottom: 0; }
+
+#administration_content {
+  float: right;
+  width: 740px; }
+  #administration_content h1 {
+    padding-bottom: 25px;
+    line-height: 20px; }
+  #administration_content form input[type=text], #administration_content form textarea {
+    width: auto; }
+  #administration_content form .medium_button {
+    float: right;
+    margin-top: 20px; }
