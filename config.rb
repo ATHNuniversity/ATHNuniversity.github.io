@@ -9,6 +9,17 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :markdown,
+    autolink: true,
+    fenced_code_blocks: true,
+    footnotes: true,
+    highlight: true,
+    smartypants: true,
+    strikethrough: true,
+    tables: true,
+    with_toc_data: true
+set :markdown_engine, :redcarpet
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -28,7 +39,7 @@ activate :blog do |blog|
   # Matcher for blog source files
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
-  # blog.layout = "layout"
+  #blog.layout = "blog_layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = "{year}.html"
@@ -65,6 +76,12 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
 end
 
 activate :directory_indexes

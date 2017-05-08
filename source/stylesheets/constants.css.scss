@@ -1,0 +1,220 @@
+/* Constants of the app: **colors and mixins**. You probably do not want to edit this file... Concepts (meaning objects),
+layout, and html element base styling does not go here.*/
+
+$verydarkblue: #0157a1;
+$darkblue: #175EA9;
+$mediumblue: #0174D7;
+$lightblue: #65A0E0;
+$highlight-color: #bbddff;
+
+$newbleedbg: #e89901;
+$immunetolerancebg: #b455ae;
+$followupbg: #6abc12;
+$otherbg: #4edbbc;
+$multitreatmentbg: #00c6ff;
+$prophylaxisbg: #0188ba;
+
+$grey: #888;
+$greyborder: #aaa;
+$lightgreyborder: #ddd;
+$groove_border: rgba(255, 255, 255, .7);
+
+$lightgrey: #f1f2f3;
+$black: black;
+$almostblack: #4e4f4e;
+$white: white;
+$almostwhite: #fbfdfe;
+
+$washedblue: #e9f3fc;
+$washedblue-border: #D6E6F5;
+$navblue: #65a1e0;
+$widgetblue: #0157a1;
+
+$widget-even: #E0EEFB;
+$widget-odd: #F4F9FD;
+$widget-selected: #FFFFC7;
+
+$linegray: #a3a4a4;
+$disabledgray: #cacaca;
+
+$locked_user_red: #FFD0D0;
+$form_error_red: #ffaa82;
+$new_record: #ffdeba;
+
+@mixin with-error-indicator {
+  dd, li {
+    padding-right: 22px;
+    position: relative;
+
+    .no_error, .error_indicator {
+      position: absolute;
+      right: 0;
+      bottom: 6px;
+      margin: 0;
+    }
+  }
+}
+
+@mixin border-radius($radius){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin border-radius-4($tl, $tr, $br, $bl){
+  -moz-border-radius-topleft: $tl;
+  -moz-border-radius-topright: $tr;
+  -moz-border-radius-bottomright: $br;
+  -moz-border-radius-bottomleft: $bl;
+  -webkit-border-radius: $tl $tr $br $bl;
+  border-radius: $tl $tr $br $bl;
+}
+
+@mixin input-shadow {
+  -moz-box-shadow: inset 0px 3px 5px #ddd;
+  -webkit-box-shadow: inset 0px 3px 5px #ddd;
+  box-shadow: inset 0px 3px 5px #ddd;
+}
+
+@mixin drop-shadow($x: 3px, $y: 3px, $blur: 10px, $color: #000){
+  -moz-box-shadow: $x $y $blur $color;
+  -webkit-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin button {
+  background-color: $darkblue;
+  @include border-radius(15px);
+  border: 1px solid $darkblue;
+  color: white;
+  display: block;
+  cursor: pointer;
+
+  background: $disabledgray image-url('big_button_static_state.png') center left repeat-x;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  padding: 0 25px;
+  height: 45px;
+
+  margin-right: 5px;
+
+  &:hover {
+    background: $disabledgray image-url('big_button_hover_state.png') center left repeat-x;
+    text-decoration: none;
+  }
+  &:active {
+    background: $disabledgray image-url('big_button_click_state.png') center left repeat-x;
+  }
+
+  &.inactive {
+    background-image: none !important;
+    border-color: $disabledgray -#333;
+    color: white;
+    cursor: default;
+  }
+}
+
+@mixin medium_button {
+  @include button;
+  @include border-radius(6px);
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@mixin light_button {
+  @include medium_button;
+
+  color: #65a0e0;
+  border: 1px solid #65a0e0;
+
+  height: 28px;
+
+  background: image-url('light_button_static.jpg') center left repeat-x !important;
+  &:hover {
+    background: image-url('light_button_hover.jpg') center left repeat-x !important;
+    text-decoration: none;
+  }
+  &:active {
+    background: image-url('light_button_click.jpg') center left repeat-x !important;
+  }
+}
+
+@mixin disabled {
+  background-color: $disabledgray;
+  background-image: none;
+  border: 1px solid $disabledgray;
+}
+
+@mixin grouping {
+  h3 {
+    color: $darkblue;
+  }
+
+  ul {
+    margin-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  background-color: $washedblue;
+  margin-top: 5px;
+  padding: 10px 10px 0 10px;
+  margin-bottom: 10px;
+  @include border-radius(5px);
+
+  hr {
+    color: #d8d8d8;
+    border-bottom: 1px solid white;
+  }
+}
+
+@mixin two-colored-linear-gradient($color1, $color2){
+  background-color: ($color1 + $color2) / 2;
+  background-image: -moz-linear-gradient(top, $color1, $color2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($color1), to($color2));
+  background-image: -webkit-linear-gradient(top, $color1, $color2);
+  background-image: -o-linear-gradient(top, $color1, $color2);
+  background-image: linear-gradient(top, $color1, $color2);
+  background-image: -ms-linear-gradient(top, $color1, $color2);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr = '$color1', endColorstr = '$color2', GradientType = 0);
+}
+
+@mixin inset-box-shadow($x, $y, $r, $color) {
+  -webkit-box-shadow: inset $x $y $r $color;
+  -moz-box-shadow: inset $x $y $r $color;
+  box-shadow: inset $x $y $r $color;
+}
+
+@mixin one-color-linear-gradient($color){
+  background-color: $color;
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+@mixin background-size($width, $height){
+  -webkit-background-size: $width $height;
+  -moz-background-size: $width $height;
+  -o-background-size: $width $height;
+  background-size: $width $height;
+}
+
+@mixin animation($type, $duration, $transition, $loop){
+  -webkit-animation: $type $duration $transition $loop;
+  -moz-animation: $type $duration $transition $loop;
+  -ms-animation: $type $duration $transition $loop;
+  -o-animation: $type $duration $transition $loop;
+  animation: $type $duration $transition $loop;
+}
