@@ -44,6 +44,8 @@ tags:
 
 ### Stamp coupling (Data-structured coupling)
 
+- Common (accepted?) in pattern matching languages.
+
 ### Data coupling
 
 ### Message coupling (low)
